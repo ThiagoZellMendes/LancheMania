@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { CategoryList } from "./_components/categoryList";
 import { Header } from "./_components/header";
+import { ProductList } from "./_components/productList";
 import { SearchInput } from "./_components/searchInput";
 
 export default function Home() {
@@ -14,7 +15,7 @@ export default function Home() {
       <div className="px-5 pt-6">
         <CategoryList />
       </div>
-      <div className="px-5">
+      <div className="px-5 py-6">
         <Image
           src={"/promo-banner-01.png"}
           alt="Até 30% de Desconto em pizza"
@@ -24,6 +25,10 @@ export default function Home() {
           sizes="100vw"
           quality={100}
         />
+      </div>
+
+      <div className="pt-6">
+        <ProductList />
       </div>
     </>
   );
